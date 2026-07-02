@@ -1,0 +1,340 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyzing Your Meal | NutriScan AI</title>
+    <link rel="icon" type="image/png" href="{% static 'images/food.png' %}">
+    <link rel="stylesheet" href="{% static 'css/variables.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/analyzing.css' %}">
+    <link rel="stylesheet" href="{% static 'css/upload.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-bowl-food"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="brand-name">NutriScan <span class="ai-suffix">AI</span></span>
+                    <span class="brand-tagline">Detect • Analyze • Nourish</span>
+                </div>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="{% url 'myapp:home' %}" class="nav-link">Home</a></li>
+                <li><a href="{% url 'myapp:home' %}#how-it-works" class="nav-link">How It Works</a></li>
+                <li><a href="{% url 'myapp:home' %}#features" class="nav-link">Features</a></li>
+                <li><a href="{% url 'myapp:home' %}#nutrition" class="nav-link active">Nutrition</a></li>
+                <li><a href="{% url 'myapp:home' %}#contact" class="nav-link">Contact</a></li>
+                <li class="mobile-only-cta">
+                    <a href="{% url 'myapp:home' %}#nutrition" class="btn-analyze mobile-btn">
+                        Analyze Now <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="{% url 'myapp:home' %}#nutrition" class="btn-analyze">
+                    Analyze Now
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="mobile-menu-btn" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="analysis-hero">
+        <div class="ai-chip-container">
+            <div class="ai-chip-icon">
+                <i class="fa-solid fa-microchip"></i>
+                <div class="chip-glow"></div>
+            </div>
+        </div>
+
+        <div class="hero-text-content">
+            <h1 class="hero-title">
+                Analyzing <span class="gradient-text">Your Meal</span>
+            </h1>
+            <p class="hero-subtitle">
+                Our AI is currently identifying your food, detecting ingredients and estimating nutritional values.
+            </p>
+        </div>
+    </section>
+
+    <section class="analysis-layout">
+        <div class="analysis-grid">
+            <div class="analysis-left">
+                <div class="uploaded-meal-card glass-card fade-in-section">
+                    <div class="card-header">
+                        <h3><i class="fa-regular fa-image"></i> Uploaded Meal</h3>
+                    </div>
+
+                    <div class="uploaded-meal-content">
+                        <div class="meal-preview-wrap">
+                            <img id="uploaded-meal-img" src="" alt="Uploaded Meal" class="uploaded-meal-img">
+                        </div>
+
+                        <div class="meal-details">
+                            <div class="detail-row">
+                                <div class="detail-icon">
+                                    <i class="fa-solid fa-scale-balanced"></i>
+                                </div>
+                                <div class="detail-text">
+                                    <span class="detail-label">Meal Weight</span>
+                                    <span class="detail-value"><span id="meal-weight-value">0</span> <small>grams</small></span>
+                                </div>
+                            </div>
+
+                            <div class="detail-row">
+                                <div class="detail-icon">
+                                    <i class="fa-solid fa-camera"></i>
+                                </div>
+                                <div class="detail-text">
+                                    <span class="detail-label">Image Size</span>
+                                    <span class="detail-value" id="meal-size-value">0.00 MB</span>
+                                </div>
+                            </div>
+
+                            <div class="detail-row">
+                                <div class="detail-icon">
+                                    <i class="fa-solid fa-expand"></i>
+                                </div>
+                                <div class="detail-text">
+                                    <span class="detail-label">Resolution</span>
+                                    <span class="detail-value" id="meal-resolution-value">0 x 0 px</span>
+                                </div>
+                            </div>
+
+                            <div class="detail-row">
+                                <div class="detail-icon">
+                                    <i class="fa-regular fa-file-lines"></i>
+                                </div>
+                                <div class="detail-text">
+                                    <span class="detail-label">File Name</span>
+                                    <span class="detail-value file-name-value" id="meal-file-name">uploaded-image.jpg</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ai-pipeline-card glass-card fade-in-section">
+                    <div class="card-header">
+                        <h3><i class="fa-solid fa-sitemap"></i> AI Processing Pipeline</h3>
+                    </div>
+
+                    <div class="pipeline-steps">
+                        <div class="pipeline-step completed">
+                            <div class="step-icon">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div class="step-content">
+                                <div class="step-top">
+                                    <span class="step-title">Image Uploaded</span>
+                                    <span class="step-status completed-text">Completed</span>
+                                </div>
+                                <div class="step-bar filled"></div>
+                            </div>
+                        </div>
+
+                        <div class="pipeline-step active">
+                            <div class="step-icon">
+                                <i class="fa-solid fa-spinner spinner"></i>
+                            </div>
+                            <div class="step-content">
+                                <div class="step-top">
+                                    <span class="step-title">Detecting Food</span>
+                                    <span class="step-status active-text">In Progress</span>
+                                </div>
+                                <div class="step-bar loading">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pipeline-step pending">
+                            <div class="step-icon">
+                                <i class="fa-regular fa-hourglass"></i>
+                            </div>
+                            <div class="step-content">
+                                <div class="step-top">
+                                    <span class="step-title">Detecting Ingredients</span>
+                                    <span class="step-status pending-text">Waiting</span>
+                                </div>
+                                <div class="step-bar"></div>
+                            </div>
+                        </div>
+
+                        <div class="pipeline-step pending">
+                            <div class="step-icon">
+                                <i class="fa-regular fa-hourglass"></i>
+                            </div>
+                            <div class="step-content">
+                                <div class="step-top">
+                                    <span class="step-title">Estimating Nutrition</span>
+                                    <span class="step-status pending-text">Waiting</span>
+                                </div>
+                                <div class="step-bar"></div>
+                            </div>
+                        </div>
+
+                        <div class="pipeline-step pending">
+                            <div class="step-icon">
+                                <i class="fa-regular fa-hourglass"></i>
+                            </div>
+                            <div class="step-content">
+                                <div class="step-top">
+                                    <span class="step-title">Generating Final Report</span>
+                                    <span class="step-status pending-text">Waiting</span>
+                                </div>
+                                <div class="step-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="analysis-right">
+                <div class="ai-visual-panel glass-card fade-in-section">
+                    <div class="ai-visual-header">
+                        <span class="section-dot"></span>
+                        <span>AI Food Scanner</span>
+                    </div>
+
+                    <div class="scanner-frame">
+                        <div class="scanner-image-wrap">
+                            <img id="scanner-food-image" class="scanner-food-image" alt="Scanned food image">
+                            <div class="scanner-overlay"></div>
+                            <div class="scan-line"></div>
+                            <div class="hud-corners"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-section">
+                        <div class="progress-title-row">
+                            <span class="section-dot"></span>
+                            <span>AI Analysis Progress</span>
+                            <span id="progress-percent" class="progress-percent">0%</span>
+                        </div>
+
+                        <div class="progress-bar-track">
+                            <div id="progress-bar-fill" class="progress-bar-fill"></div>
+                        </div>
+
+                        <div class="progress-scale">
+                            <span>0%</span><span>25%</span><span>50%</span><span>75%</span><span>100%</span>
+                        </div>
+
+                        <div class="remaining-time-card">
+                            <div class="remaining-icon"><i class="fa-regular fa-clock"></i></div>
+                            <div>
+                                <div class="remaining-label">Estimated Remaining Time</div>
+                                <div id="remaining-seconds" class="remaining-value"></div>
+                            </div>
+                        </div>
+
+                        <div class="redirect-box">
+                            <span>Redirecting to Results...</span>
+                            <span class="spinner-dot"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="site-footer">
+        <div class="footer-glow-line"></div>
+
+        <div class="container footer-container">
+            <div class="footer-col brand-col">
+                <div class="footer-logo">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--primary-neon)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22c5.52 0-10-4.48-10-10S6.48 2 12 2s10 4.48 10 10-4.48 10-10 10z"></path>
+                        <path d="M12 6v6l4 2"></path>
+                    </svg>
+                    <span class="logo-text no-break">NutriScan <span class="accent-text">AI</span></span>
+                </div>
+                <p class="tagline">Detect • Analyze • Nourish</p>
+                <p class="brand-desc">
+                    AI-powered food recognition and nutrition analysis using Computer Vision and Deep Learning.
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter" class="social-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+                    </a>
+                    <a href="#" aria-label="GitHub" class="social-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn" class="social-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="col-title">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="{% url 'myapp:home' %}">Home</a></li>
+                    <li><a href="{% url 'myapp:home' %}#how-it-works">How It Works</a></li>
+                    <li><a href="{% url 'myapp:home' %}#features">Features</a></li>
+                    <li><a href="{% url 'myapp:home' %}#nutrition">Nutrition Analysis</a></li>
+                    <li><a href="{% url 'myapp:home' %}#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="col-title">Supported Features</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Food Recognition</a></li>
+                    <li><a href="#">Ingredient Detection</a></li>
+                    <li><a href="#">Nutrition Analysis</a></li>
+                    <li><a href="#">Calorie Estimation</a></li>
+                    <li><a href="#">Meal History</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact-col">
+                <h4 class="col-title">Contact Us</h4>
+                <ul class="contact-info">
+                    <li>
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <a href="mailto:support@nutriscan.ai">support@nutriscan.ai</a>
+                    </li>
+                    <li>
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                    </li>
+                    <li>
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>Computer Vision Lab<br><small class="sub-text">Tehran, Iran</small></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container bottom-container">
+                <p class="copyright">© 2026 NutriScan AI. All rights reserved.</p>
+                <div class="bottom-policy-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/analyzing.js' %}"></script>
+</body>
+</html>

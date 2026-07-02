@@ -1,0 +1,13 @@
+:root {
+    --bg-dark: #07111F;
+    --nav-bg: rgba(7, 17, 31, 0.8);
+    --primary-neon: #00D4FF;
+    --secondary-neon: #4ADE80;
+    --text-white: #FFFFFF;
+    --text-dim: #94A3B8;
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --font-main: 'Inter', 'Poppins', sans-serif;
+}
+html{
+  scroll-behavior:smooth;
+}

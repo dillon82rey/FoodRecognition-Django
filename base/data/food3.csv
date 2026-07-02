@@ -1,0 +1,102 @@
+label,ingredients,calories,protein,carbohydrates,fats,fiber,sugars,sodium
+apple_pie,"Apples, flour, butter, sugar, cinnamon",300,3,45,12,2,20,150
+baby_back_ribs,"Pork ribs, BBQ sauce, garlic, onion, spices",360,25.3,10,22,0.7,8,480
+baklava,"Phyllo dough, walnuts/pistachios, butter, sugar/honey syrup, cinnamon",330,6,40,16,2,25,120
+beef_carpaccio,"Raw beef, olive oil, lemon juice, parmesan, black pepper, greens",200,20,1,12,0,0,300
+beef_tartare,"Raw beef, egg yolk, mustard, onion, capers, salt, pepper, Worcestershire sauce",250,25,2,15,0,1,400
+beet_salad,"Beets, feta cheese, walnuts, greens, balsamic vinegar, olive oil",80,3,12,2,3,8,150
+beignets,"Flour, sugar, yeast, eggs, butter, oil, powdered sugar",400,6,50,20,2,24,200
+bibimbap,"Rice, ground meat, carrots, zucchini, bean sprouts, egg, gochujang, sesame oil",150,5,20,4,1.7,3.3,266.7
+bread_pudding,"Bread, eggs, milk, sugar, vanilla, raisins, butter, cinnamon",250,6,35,10,2,20,200
+breakfast_burrito,"Eggs, sausage/bacon, cheese, potatoes, beans, tortilla, salsa",200,10,20,7.5,2.5,2.5,300
+bruschetta,"Bread, tomatoes, garlic, olive oil, basil, salt and pepper",200,6,30,8,2,4,300
+caesar_salad,"Lettuce, caesar dressing, parmesan, croutons, garlic, egg, lemon juice",150,5,7.5,10,1.5,2.5,250
+cannoli,"Crispy shell (flour, butter), ricotta, sugar, vanilla, chocolate chips, pistachios",400,8,50,20,2,30,100
+caprese_salad,"Tomatoes, mozzarella, fresh basil, olive oil, salt and pepper",133.3,5.3,6.7,10,1.3,3.3,133.3
+carrot_cake,"Carrots, flour, sugar, oil, eggs, walnuts, cream cheese, vanilla, cinnamon",350,4,45,18,2,30,300
+ceviche,"Raw fish, lime juice, onion, cilantro, chili pepper, salt",133.3,13.3,6.7,3.3,1.3,2,266.7
+cheese_plate,"Assorted cheeses (cheddar, gouda, brie, camembert), grapes, walnuts, bread, jam, honey",300,13.3,3.3,23.3,0,0.7,400
+cheesecake,"Cream cheese, sugar, eggs, butter, biscuits, vanilla, sour cream",350,6,30,22,1,25,250
+chicken_curry,"Chicken, curry paste, coconut milk, onion, garlic, ginger, oil, spices",150,10,7.5,7.5,1.5,2.5,250
+chicken_quesadilla,"Cooked chicken, cheese, tortilla, bell pepper, onion, salsa, spices",233.3,13.3,16.7,10,1.3,1.3,400
+chicken_wings,"Chicken wings, oil, salt, pepper, BBQ/buffalo sauce, garlic powder",300,20,10,20,0,1,400
+chocolate_cake,"Flour, sugar, cocoa powder, eggs, butter, vanilla, baking soda, milk",400,5,50,20,2,35,300
+chocolate_mousse,"Dark chocolate, eggs, sugar, cream, butter, vanilla",300,5,25,20,2,20,100
+churros,"Flour, water, salt, sugar, oil, cinnamon (powdered sugar for topping)",400,6,50,20,2,24,200
+clam_chowder,"Clams, potatoes, onion, celery, cream, butter, flour, broth",125,5,10,6,1,2.5,400
+club_sandwich,"Toast, chicken/turkey, bacon, lettuce, tomato, mayonnaise",200,10,17.5,9,1.5,2.5,300
+crab_cakes,"Crab meat, eggs, mayonnaise, mustard, breadcrumbs, chives, spices",250,15,10,15,1,2,400
+creme_brulee,"Cream, egg yolks, sugar, vanilla, brown sugar (for topping)",300,5,25,20,0,20,100
+croque_madame,"Bread, ham, gruyere cheese, fried egg, béchamel sauce, butter",225,10,15,12.5,1,2.5,400
+cup_cakes,"Flour, sugar, butter, eggs, baking powder, vanilla, milk, powdered sugar/cream (topping)",400,6,50,20,2,30,300
+deviled_eggs,"Hard-boiled eggs, mayonnaise, mustard, paprika, vinegar, salt and pepper",200,12,2,16,0,2,240
+donuts,"Flour, sugar, eggs, yeast, butter, oil, powdered sugar/glaze",400,6,50,20,2,24,300
+dumplings,"Ground meat, cabbage, green onion, garlic, flour, oil, water, salt and pepper",250,8,30,10,2,2,300
+edamame,"Green soybeans, salt, water",120,11,10,5,5,2,10
+eggs_benedict,"Poached eggs, English muffin, Canadian bacon, hollandaise sauce, butter, lemon juice",200,10,10,12.5,1,1,300
+escargots,"Snails, butter, garlic, parsley, white wine, salt and pepper",200,15,5,12,1,1,300
+falafel,"Chickpeas, greens (parsley, cilantro), garlic, cumin, oil, salt",300,10,30,16,6,4,400
+filet_mignon,"Beef tenderloin, butter, salt, pepper, rosemary, thyme",250,20,0,16.7,0,0,66.7
+fish_and_chips,"Fish fillet, flour, eggs, potatoes, oil, salt, vinegar",250,10,20,12.5,1.5,1,300
+foie_gras,"Duck/goose liver, salt, pepper, cognac, sugar",400,10,4,40,0,2,200
+french_fries,"Potatoes, oil, salt",300,4,35,15,3,0,200
+french_onion_soup,"Onions, beef broth, butter, white wine, baguette, gruyere cheese",125,5,10,6,1,2.5,400
+french_toast,"Bread, eggs, milk, sugar, vanilla, cinnamon, butter, powdered sugar",250,8,30,10,2,10,300
+fried_calamari,"Squid, flour, eggs, oil, salt, lemon, marinara sauce",300,15,20,15,1,1,400
+fried_rice,"Cooked rice, eggs, soy sauce, carrots, peas, green onion, oil, garlic",150,4,25,5,1,1.5,200
+frozen_yogurt,"Frozen yogurt, sugar, milk, vanilla/natural flavorings (strawberry, etc.)",150,4,25,3,0,20,50
+garlic_bread,"Bread, butter, garlic, parsley, salt, parmesan (optional)",300,8,40,12,2,4,400
+gnocchi,"Potatoes, flour, eggs, salt",166.7,4,26.7,3.3,1.3,1.3,200
+greek_salad,"Tomatoes, cucumber, feta, black olives, red onion, olive oil, oregano, vinegar",125,4,7.5,9,2,2.5,200
+grilled_cheese_sandwich,"Bread, cheese (cheddar/mozzarella), butter",266.7,10,20,13.3,1.3,3.3,400
+grilled_salmon,"Salmon, olive oil, lemon, salt, pepper, dill, garlic",200,23.3,0,10,0,0,66.7
+guacamole,"Avocado, onion, cilantro, lime juice, chili pepper, salt, tomato (optional)",200,4,10,16,6,2,100
+gyoza,"Ground meat, cabbage, green onion, garlic, gyoza wrapper, sesame oil, soy sauce",200,8,20,8,2,2,300
+hamburger,"Ground beef, burger bun, lettuce, tomato, onion, pickles, ketchup and mustard",250,13.3,20,12,1.3,3.3,300
+hot_and_sour_soup,"Meat/chicken broth, mushrooms, tofu, egg, black vinegar, chili pepper, ginger, soy sauce",75,4,7.5,2.5,1,1.5,300
+hot_dog,"Sausage, hot dog bun, mustard, ketchup, onion, pickles (optional)",250,10,15,15,1,3,500
+huevos_rancheros,"Eggs, tomato and chili sauce (salsa), beans, tortilla, cheese, cilantro",150,7.5,10,7.5,2,1.5,200
+hummus,"Chickpeas, tahini, lemon juice, garlic, olive oil, salt, paprika",200,8,16,12,6,2,200
+ice_cream,"Milk, cream, sugar, vanilla/flavorings, egg yolks (optional)",200,4,25,10,0,20,50
+lasagna,"Ground beef, tomato sauce, ricotta, mozzarella, lasagna sheets, parmesan",200,10,20,10,2,3,300
+lobster_bisque,"Lobster/crab meat, cream, butter, onion, celery, brandy, spices",125,5,7.5,7.5,1,2.5,250
+lobster_roll_sandwich,"Lobster meat, mayonnaise, chopped celery, lemon juice, warm roll, lettuce",200,10,15,10,1,2.5,300
+macaroni_and_cheese,"Macaroni, cheddar cheese, milk, butter, flour, mustard (optional)",200,6,25,9,1,3,300
+macarons,"Almond flour, sugar, egg whites, powdered sugar, food coloring, various fillings",400,6,50,20,2,40,100
+miso_soup,"Miso paste, tofu, wakame seaweed, green onion, hot water",50,3,5,1.5,1,1,400
+mussels,"Mussels, garlic, onion, tomato, white wine, parsley, butter",133.3,16.7,3.3,5.3,0,0.7,266.7
+nachos,"Tortilla chips, cheese, tomato/chili salsa, chili pepper, beans, avocado (guacamole)",250,5,25,12.5,2,2.5,300
+omelette,"Eggs, butter, salt, pepper, vegetables (mushrooms, bell pepper), cheese (optional)",166.7,10,1.3,12,0,0.7,200
+onion_rings,"Onion rings, flour, eggs, breadcrumbs, oil, salt",300,4,35,15,2,5,200
+oysters,"Raw oysters, lemon juice, shallot sauce (or cocktail sauce), seasoning",100,10,5,3,0,1,200
+pad_thai,"Rice noodles, eggs, shrimp/chicken, bean sprouts, peanuts, tamarind sauce, green onion",200,7.5,30,6,2,5,300
+paella,"Rice, chicken, shrimp, mussels, saffron, vegetables (tomato, peas), chorizo",175,10,20,5,1.5,2.5,250
+pancakes,"Flour, eggs, milk, butter, baking powder, sugar, vanilla, maple syrup (optional)",250,6,35,8,2,10,300
+panna_cotta,"Cream, sugar, vanilla, gelatin, strawberry/caramel sauce (optional)",300,5,25,20,0,20,50
+peking_duck,"Whole duck, honey, soy sauce, Chinese five-spice, cucumber, green onion, hoisin sauce",266.7,20,6.7,16.7,0,3.3,333.3
+pho,"Beef broth, rice noodles, sliced beef, basil, cilantro, bean sprouts, lime",116.7,6.7,16.7,2.7,1,1.7,266.7
+pizza,"Pizza dough, tomato sauce, mozzarella, ground meat/pepperoni, vegetables (mushrooms, peppers)",250,10,30,10,2,2.5,400
+pork_chop,"Pork loin, salt, pepper, olive oil, garlic, rosemary",233.3,20,0,14.7,0,0,266.7
+poutine,"French fries, cheese curds, hot gravy",250,5,25,12.5,1.5,1,300
+prime_rib,"Prime rib roast, salt, pepper, garlic, rosemary, thyme, butter",300,20,0,22.5,0,0,250
+pulled_pork_sandwich,"Pulled pork, BBQ sauce, coleslaw, burger bun, pickles",200,10,20,7.5,1.5,5,300
+ramen,"Wheat noodles, meat/chicken broth, egg, pork (chashu), seaweed, corn, green onion",133.3,5,20,3.3,1.3,1.7,266.7
+ravioli,"Pasta dough, ground meat/vegetables/cheese (filling), tomato sauce or butter and sage",150,6,20,5,1.5,2,250
+red_velvet_cake,"Flour, sugar, cocoa, buttermilk, vinegar, baking soda, red food coloring, cream cheese (frosting)",350,5,45,18,2,30,300
+risotto,"Arborio rice, meat/chicken broth, onion, butter, white wine, parmesan",150,4,25,4,1,1.5,200
+samosa,"Dough, potatoes, peas, spices (cumin, coriander), oil, salt",300,6,40,12,4,4,400
+sashimi,"Raw fish (salmon, tuna, grouper), wasabi, soy sauce, pickled ginger",150,25,0,5,0,0,100
+scallops,"Scallop meat, butter, garlic, lemon juice, salt, pepper",120,20,2,3,0,0,200
+seaweed_salad,"Seaweed (wakame), sesame, soy sauce, vinegar, sesame oil, sugar",50,2,8,1,3,2,300
+shrimp_and_grits,"Shrimp, grits, butter, cheddar cheese, bacon, green onion, Cajun seasoning",150,10,15,5,1,1.5,250
+spaghetti_bolognese,"Spaghetti, ground beef, tomato sauce, onion, carrot, celery, garlic, olive oil",175,7.5,20,6,1.5,2.5,200
+spaghetti_carbonara,"Spaghetti, eggs, parmesan/pecorino, bacon/pancetta, black pepper, olive oil",200,7.5,22.5,9,1,2,250
+spring_rolls,"Rice paper, vegetables (carrots, cabbage, cucumber), meat/shrimp, soy sauce, mint",200,6,30,8,2,4,300
+steak,"Steak, butter, garlic, rosemary, salt, black pepper",250,23.3,0,16.7,0,0,66.7
+strawberry_shortcake,"Sponge cake, fresh strawberries, whipped cream, sugar, vanilla",300,4,40,12,2,25,200
+sushi,"Sushi rice, seaweed (nori), raw fish (salmon, tuna), vegetables (cucumber, avocado)",200,8,30,2,1,5,300
+tacos,"Corn/wheat tortilla, ground meat/chicken, lettuce, tomato, cheese, salsa",250,10,20,12,3,2,300
+takoyaki,"Flour batter, cooked octopus, green onion, special sauce, katsuobushi, mayonnaise",200,8,25,8,1,5,300
+tiramisu,"Savoiardi biscuits, mascarpone, espresso, eggs, sugar, cocoa powder",300,6,30,15,1,20,100
+tuna_tartare,"Raw tuna, soy sauce, sesame oil, green onion, avocado, sesame seeds, lemon juice",150,20,2,5,0,1,200
+waffles,"Flour, eggs, milk, butter, baking powder, sugar, vanilla, maple syrup (optional)",300,6,40,12,2,10,300

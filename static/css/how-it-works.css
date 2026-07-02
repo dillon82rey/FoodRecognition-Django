@@ -1,0 +1,89 @@
+/* ===============================
+   HOW IT WORKS
+================================ */
+
+.how-it-works-section {
+    padding: 100px 20px;
+    background: transparent;
+}
+
+.workflow-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.work-step {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    transition: all 0.4s ease;
+}
+
+.work-step h3 {
+    color: #fff;
+    margin: 15px 0 10px;
+    font-size: 1.1rem;
+}
+
+.work-step p {
+    color: #9ca3af;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Arrow Styling */
+.arrow-wrap {
+    margin: 0 10px;
+    color: #00e5ff;
+}
+
+.arrow {
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(90deg, #00e5ff, #00ff9c);
+    position: relative;
+    animation: glow 1.5s infinite alternate;
+}
+
+.arrow::after {
+    content: "▶";
+    position: absolute;
+    right: -5px;
+    top: -8px;
+    font-size: 12px;
+}
+
+/* Responsiveness */
+
+@media (max-width: 1024px) {
+    .workflow-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    .arrow-wrap { display: none; } /* مخفی کردن فلش‌ها در تبلت */
+}
+
+@media (max-width: 768px) {
+    .workflow-grid {
+        grid-template-columns: 1fr;
+    }
+    .work-step {
+        border-left: 2px solid rgba(0, 229, 255, 0.2);
+        text-align: left;
+        padding-left: 30px;
+    }
+}
+
+/* Animation */
+@keyframes glow {
+    from { opacity: 0.3; transform: scaleX(0.8); }
+    to { opacity: 1; transform: scaleX(1.1); }
+}
+
+.work-step:hover {
+    transform: translateY(-5px);
+}

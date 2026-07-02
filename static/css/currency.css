@@ -1,0 +1,362 @@
+
+.currency-selection {
+    padding: 100px 20px;
+    background-color: #07111F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Container limits width to 1200px */
+.container-selection {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/* --- Section Title & Decorative Neon Lines --- */
+.section-title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.section-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-align: center;
+    letter-spacing: -0.5px;
+    margin: 0;
+}
+
+.decor-line {
+    flex-grow: 1;
+    height: 1px;
+    max-width: 150px;
+}
+
+.decor-left {
+    background: linear-gradient(90deg, rgba(0, 212, 255, 0) 0%, rgba(74, 222, 128, 0.6) 100%);
+}
+
+.decor-right {
+    background: linear-gradient(90deg, rgba(139, 92, 246, 0.6) 0%, rgba(139, 92, 246, 0) 100%);
+}
+
+.decor-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.decor-left + .decor-dot {
+    background-color: #4ADE80;
+    box-shadow: 0 0 8px #4ADE80;
+}
+
+.decor-dot + .decor-right {
+    background-color: #8B5CF6;
+    box-shadow: 0 0 8px #8B5CF6;
+}
+
+/* --- Responsive CSS Grid Layout --- */
+.currency-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    width: 100%;
+}
+
+/* --- Currency Card (Base Style) --- */
+.currency-card {
+    position: relative;
+    height: 260px;
+    border-radius: 24px;
+    overflow: hidden;
+    background: rgba(17, 24, 39, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1),
+                box-shadow 0.35s cubic-bezier(0.25, 0.8, 0.25, 1),
+                border-color 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    will-change: transform, box-shadow;
+}
+
+/* Individual Card Borders using Accents */
+.usd-card {
+    border: 1px solid rgba(74, 222, 128, 0.15); /* سبز ملایم */
+}
+
+.gbp-card {
+    border: 1px solid rgba(139, 92, 246, 0.15); /* بنفش ملایم */
+}
+
+/* --- Banknote Background & Blend Overlays --- */
+.card-bg-wrap {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.card-banknote-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right center;
+    opacity: 0.28; /* بین ۲۵ تا ۳۵ درصد بر اساس مستندات */
+    transition: transform 0.45s cubic-bezier(0.25, 0.8, 0.25, 1);
+    filter: grayscale(20%) brightness(0.9);
+}
+
+/* Gradient to blend image to the right smoothly */
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, 
+        rgba(7, 17, 31, 0.95) 0%, 
+        rgba(7, 17, 31, 0.7) 50%, 
+        rgba(7, 17, 31, 0.3) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* --- Card Content Wrapper --- */
+.card-content-wrap {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Circular Flags */
+.flag-icon-wrap {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    flex-shrink: 0;
+}
+
+.flag-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.currency-title-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.country-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #B8C0CC;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.currency-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.currency-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #B8C0CC;
+    margin: 16px 0;
+    max-width: 80%;
+}
+
+/* --- Button Styles --- */
+.analyze-btn {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 42px;
+    padding: 0 20px;
+    border-radius: 30px;
+    background: transparent;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #FFFFFF;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.analyze-btn span {
+    position: relative;
+    z-index: 2;
+}
+
+.arrow-icon {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Accent Colors for Buttons */
+.btn-usd {
+    border: 1px solid rgba(74, 222, 128, 0.4);
+    box-shadow: 0 0 10px rgba(74, 222, 128, 0.05);
+}
+
+.btn-gbp {
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.05);
+}
+
+/* --- Hover Effects --- */
+
+/* Hover Card 1: USD */
+.currency-card.usd-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(74, 222, 128, 0.6);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
+                0 0 30px rgba(74, 222, 128, 0.2);
+}
+
+.currency-card.usd-card:hover .btn-usd {
+    background: rgba(74, 222, 128, 0.15);
+    border-color: #4ADE80;
+    box-shadow: 0 0 15px rgba(74, 222, 128, 0.4);
+    transform: scale(1.05);
+}
+
+/* Hover Card 2: GBP */
+.currency-card.gbp-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(139, 92, 246, 0.6);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
+                0 0 30px rgba(139, 92, 246, 0.2);
+}
+
+.currency-card.gbp-card:hover .btn-gbp {
+    background: rgba(139, 92, 246, 0.15);
+    border-color: #8B5CF6;
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+    transform: scale(1.05);
+}
+
+/* Common Hover effects inside card */
+.currency-card:hover .card-banknote-bg {
+    transform: scale(1.08);
+}
+
+.currency-card:hover .arrow-icon {
+    transform: translateX(5px);
+}
+
+/* --- Responsive Web Design (Media Queries) --- */
+@media (max-width: 992px) {
+    .currency-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .currency-card {
+        height: 240px;
+    }
+    
+    .section-title {
+        font-size: 30px;
+    }
+    
+    .decor-line {
+        max-width: 80px;
+    }
+}
+
+@media (max-width: 576px) {
+    .currency-selection {
+        padding: 60px 16px;
+    }
+    
+    .card-content-wrap {
+        padding: 24px;
+    }
+    
+    .currency-name {
+        font-size: 22px;
+    }
+    
+    .currency-description {
+        font-size: 14px;
+        max-width: 100%;
+    }
+    
+    .decor-line {
+        display: none;
+    }
+}
+body {
+    transition: opacity 0.35s ease, filter 0.35s ease;
+}
+body.page-exit-active {
+    opacity: 0;
+    filter: blur(5px);
+}
+
+
+
+.nutrition-tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.food-tag {
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #B8C0CC;
+    transition: all 0.3s ease;
+}
+
+.usd-card:hover .food-tag {
+    border-color: rgba(74, 222, 128, 0.3);
+    color: #fff;
+}

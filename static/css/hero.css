@@ -1,0 +1,300 @@
+/* ================= HERO SECTION LAYOUT ================= */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 8%;
+}
+
+.hero-container {
+    /* width: 100%; 
+     max-width: 1300px; 
+    margin: 0 auto;*/
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* Left Side */
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.05;
+    color: var(--text-white);
+    margin-bottom: 25px;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, var(--primary-neon), var(--secondary-neon));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.hero-content p {
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 35px;
+    max-width: 520px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(74,222,128,0.3);
+    color: var(--secondary-neon);
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+
+.hero-cta {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, var(--primary-neon), var(--secondary-neon));
+    padding: 14px 32px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+    text-decoration: none;
+    font-weight: 600;
+    color: #07111F;
+}
+
+.btn-secondary {
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 14px 32px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    text-decoration: none;
+    color: var(--text-white);
+    background: rgba(255,255,255,0.03);
+}
+
+/* Right Side */
+.hero-visual {
+    width: 100%;
+}
+
+/* Container Features */
+.hero-features {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 12px;
+}
+
+/* Icons Styling */
+.feature-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: rgba(0, 255, 136, 0.05);
+    color: var(--secondary-neon); 
+    border: 1px solid rgba(74, 222, 128, 0.2);
+    box-shadow: 0 0 10px rgba(74, 222, 128, 0.15);
+}
+
+.feature-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.feature-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-text strong {
+    font-size: 0.95rem;
+    color: var(--text-white);
+    font-weight: 500;
+}
+
+.feature-text span {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 2px;
+}
+
+/* Adjustments for the HUD Scanner & Line */
+.scanner-frame {
+    position: relative;
+    border: 1px solid rgba(0, 212, 255, 0.15);
+    background: rgba(17, 24, 39, 0.6);
+    padding: 12px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.05);
+}
+
+.hud-corners {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+    stroke-linejoin: round;
+}
+
+.banknote-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+    
+    filter: brightness(0.9) contrast(1.1);
+}
+
+/* Horizontal Laser Scanning Anim */
+.scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to bottom, rgba(0, 212, 255, 0), var(--primary-neon), rgba(0, 212, 255, 0));
+    animation: scanVertical 4s infinite ease-in-out;
+    box-shadow: 0 0 15px var(--primary-neon);
+    z-index: 5;
+}
+
+@keyframes scanVertical {
+    0%, 100% { top: 0%; }
+    50% { top: 100%; }
+}
+
+/* UI Progress Indicator */
+.scanning-ui {
+    margin-top: 20px;
+}
+
+.scan-status-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.scan-status-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--secondary-neon);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--secondary-neon);
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+}
+
+.scan-text {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 600;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.progress-bar {
+    flex-grow: 1;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 72%;
+    background: linear-gradient(90deg, var(--primary-neon), var(--secondary-neon));
+    box-shadow: 0 0 10px rgba(74, 222, 128, 0.5);
+    border-radius: 10px;
+}
+
+.percentage {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+    min-width: 30px;
+}
+/* Responsive adjustments for Hero section */
+@media (max-width: 900px) {
+    .hero {
+        padding: 60px 5%; /* کاهش پدینگ برای موبایل */
+        min-height: auto; /* جلوگیری از کشیدگی بی‌مورد */
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr; /* تبدیل از ۲ ستون به ۱ ستون */
+        gap: 40px;
+        text-align: center; /* وسط‌چین شدن محتوا در موبایل */
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem; /* کاهش سایز فونت برای جلوگیری از شکستگی بد */
+        line-height: 1.2;
+    }
+
+    .hero-content p {
+        margin: 0 auto 30px auto; /* وسط‌چین کردن پاراگراف */
+    }
+
+    .hero-cta {
+        justify-content: center; /* وسط‌چین کردن دکمه‌ها */
+    }
+
+    .hero-features {
+        justify-content: center; /* وسط‌چین کردن آیکون‌ها */
+        flex-direction: column; /* چیدمان عمودی برای آیکون‌ها در موبایل */
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+/* اصلاحات تکمیلی برای موبایل‌های خیلی کوچک */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-cta {
+        flex-direction: column; /* دکمه‌ها زیر هم قرار بگیرند */
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 100%; /* دکمه‌ها تمام عرض شوند */
+    }
+}
